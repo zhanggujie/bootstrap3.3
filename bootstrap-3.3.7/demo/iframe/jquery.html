@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content="www.atguigu.com">
+    <!-- 苹果手机是否全屏显示页面-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--控制苹果手机状态栏的颜色-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" src="../../dist/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../dist/js/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <h2>JQUERT 学习</h2>
+    <h3>ajax请求 <small>从本地获取数据</small></h3>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>编号</th>
+            <th>婚况</th>
+        </tr>
+        <tr >
+            <td><span>张珊</span></td>
+            <td><span>女</span></td>
+            <td><span>28</span></td>
+            <td><span>03223</span></td>
+            <td><span>未婚</span></td>
+        </tr>
+
+
+    </table>
+</div>
+
+
+<script type="text/javascript">
+    $.ajax({
+        url:'index.json',
+        dataType:'json',
+        success:function (data) {
+            console.log(data)
+            var data = data.data;
+            var html = "";
+            for(person in data){
+                html+=`<tr>
+                <td><span>${data[person].name}</span></td>
+                <td><span>${data[person].gender}<span></td>
+                <td><span>${data[person].age}</span></td>
+                <td><span>${data[person].serialNumber}</span></td>
+                <td><span>${data[person].marriage}</span></td>
+            </tr>`;
+            }
+            $('tbody').append(html)
+        }
+    })
+</script>
+</body>
+</html>

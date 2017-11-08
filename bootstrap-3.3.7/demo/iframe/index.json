@@ -1,0 +1,32 @@
+{
+ "data":[
+   {
+     "name":"李丽莎",
+     "gender":"女",
+     "age":"22",
+     "serialNumber":"08382",
+     "marriage":"未婚"
+   },
+   {
+     "name":"李明慧",
+     "gender":"女",
+     "age":"25",
+     "serialNumber":"0EDD9",
+     "marriage":"已婚"
+   },
+   {
+     "name":"王立东",
+     "gender":"男",
+     "age":"36",
+     "serialNumber":"0Y822",
+     "marriage":"已婚"
+   },
+   {
+     "name":"张偶尔",
+     "gender":"男",
+     "age":"19",
+     "serialNumber":"0A782",
+     "marriage":"未婚"
+   }
+ ]
+}
