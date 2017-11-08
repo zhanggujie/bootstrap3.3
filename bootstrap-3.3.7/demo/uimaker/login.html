@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content="www.atguigu.com">
+    <!-- 苹果手机是否全屏显示页面-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--控制苹果手机状态栏的颜色-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>登录页</title>
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/uimaker.css">
+    <script type="text/javascript" src="../../dist/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../dist/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #999999">
+
+<div class="bg_log" style="overflow: hidden">
+<div style="text-align: center;margin-top: 150px">
+    <img src="../imgs/logo.png" alt="">
+</div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal" aria-labelledby="true">
+    <div class="modal-dialog" role="document" aria-hidden="true" style="width: 450px">
+        <div class="modal-content" style="top: 260px">
+            <div class="modal-body" style="margin-left: 30px">
+                <form class="form-horizontal" >
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label col-sm-3">用户名:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label col-sm-3">密码:</label>
+                        <div class="col-sm-7">
+                            <input class="form-control" id="message-text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="control-label col-sm-3">验证码:</label>
+                        <div class="col-sm-5">
+                            <input class="form-control" id="message">
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">登录</button>
+                    <button type="button" class="btn btn-default"  style="margin-left: 15px">重置</button>
+                    <div style="text-align: right;margin-top: 10px;color: #999999;cursor: pointer">忘记密码 ？</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('#myModal').modal('show');
+    $('.btn-default').on('click',function () {
+        $('.bg_log').toggleClass('lg')
+    })
+</script>
+</body>
+</html>

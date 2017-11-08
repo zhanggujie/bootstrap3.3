@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content="www.atguigu.com">
+    <!-- 苹果手机是否全屏显示页面-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--控制苹果手机状态栏的颜色-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" src="../../dist/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../dist/js/bootstrap.min.js"></script>
+    <title></title>
+    <style type="text/css">
+        .col{
+            background-color: #1b6d85;
+            margin-right: 5px;
+        }
+        .col-sm-3{
+            background-color: #999999;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-3 col col-xs-offset-1">col-md-3</div>
+            <div class="col-xs-2 col">col-md-2</div>
+            <div class="col-xs-4  col" >col-md-4</div>
+            <div class="col-xs-1 col">col-md-1</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">col-xs-6 col-sm-3</div>
+        <div class="col-xs-6 col-sm-3 clearfix visible-xs-block">col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3col-xs-6 col-sm-3</div>
+
+        <div class="col-xs-6 col-sm-3">col-xs-6 col-sm-3</div>
+        <div class="col-xs-6 col-sm-3">col-xs-6 col-sm-3</div>
+    </div>
+    <div class="h1">colorew with soein ifse owiesfm 我上岛咖啡 <small>副标题</small></div>
+    <p class="lead">
+        this is  veory lfes oweifwer huifes qwurwenfdds fdsdfhue sdfkusef  s
+    </p>
+    <p class="text-left">通过类改变对齐方式 text-left  left-aligned</p>
+    <p class="text-right">通过类改变对齐方式 text-right right-aligned</p>
+    <p class="text-center">通过类改变对齐方式 text-center center-aligned</p>
+    <p class="text-justify">通过类改变对齐方式 text-justify justify text</p>
+    <p class="text-nowrap">通过类改变对齐方式 text-nowrap no wrap text</p>
+    <h2>缩略与 attr</h2>
+    <attr title="attribute"></attr>
+    <p>列表</p>
+    <ul class="list-unstyled list-inline">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+    </ul>
+    <p>表格 table</p>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th>UserName</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Day</td>
+            <td>Feie</td>
+            <td>DayFeie</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Day2</td>
+            <td>Feie2</td>
+            <td>Day2Feie2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Day</td>
+            <td>Feie3</td>
+            <td>DayFeie3</td>
+        </tr>
+    </table>
+    <p>紧缩表格 响应式表格</p>
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <tr>
+                <th>#</th>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>UserName</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Day</td>
+                <td>Feie</td>
+                <td>DayFeie</td>
+            </tr>
+            <tr class="success">
+                <td>2</td>
+                <td>Day2</td>
+                <td>Feie2</td>
+                <td>Day2Feie2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Day</td>
+                <td>Feie3</td>
+                <td>DayFeie3</td>
+            </tr>
+        </table>
+    </div>
+<h4>form  表单</h4>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="user_name">用户名</label>
+            <input type="text" class="form-control" id="user_name" placeholder="请输入用户名">
+        </div>
+        <h1><small>水平排列的表单</small></h1>
+        <div class="form-group">
+            <label for="user_password" class="control-label col-xs-1">用户密码</label>
+            <div class="col-xs-3">
+                <input type="text" class="form-control col-xs-3" id="user_password" placeholder="请输入用户密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" rows="3" style="resize: none" placeholder="多行输入框"></textarea>
+        </div>
+    </form>
+    <p>多选和单选</p>
+    <div class="checkbox">
+        <label >
+            <input type="checkbox">化学
+        </label>
+        <label >
+            <input type="checkbox">物理
+        </label>
+        <label >
+            <input type="checkbox">生物
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+        </label>
+    </div>
+    <p>禁止选择</p>
+    <div class="checkbox disabled">
+        <label >
+            <input type="checkbox" checked disabled>英语
+        </label>
+    </div>
+
+    <div class="clearfix">
+        <p>下拉列表</p>
+        <select class="col-xs-3">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+
+    <div >
+        <div class="center-block text-center" style="width: 400px">
+            从事客服是
+
+        </div>
+    </div>
+</div>
+<!--<   iframe src="text.html" frameborder="1"></iframe>-->
+</body>
+</html>

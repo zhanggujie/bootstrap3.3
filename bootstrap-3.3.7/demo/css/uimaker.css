@@ -1,0 +1,41 @@
+
+.bg_log{
+    height: 450px;
+    width: 100%;
+    background-image: url("../imgs/bg_login.jpg");
+}
+.lg{
+    height: 450px;
+    width: 100%;
+    background-image: url("../imgs/bg_loginA.jpg");
+}
+.form-horizontal{
+    margin-top: 20px;
+}
+.form-horizontal .form-group{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.form-horizontal .control-label{
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 5px;
+    font-weight: 200;
+    font-size: 16px;
+}
+.form-horizontal .form-control{
+    border-radius: 0px;
+}
+.form-horizontal .col-sm-7,.form-horizontal .col-sm-5{
+    padding-left: 0px;
+}
+.modal-footer{
+    text-align: center;
+    border: none;
+}
+.modal-footer .btn{
+    padding: 6px 20px;
+}
+.modal-backdrop.in{
+    opacity: 0;
+}

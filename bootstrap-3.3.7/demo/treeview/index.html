@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content="www.atguigu.com">
+    <!-- 苹果手机是否全屏显示页面-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--控制苹果手机状态栏的颜色-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../css/jquery.treeview.css">
+    <link rel="stylesheet" href="../css/screen.css">
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../js/jquery.treeview.js"></script>
+    <script type="text/javascript" src="../js/jquery.treeview.edit.js"></script>
+    <script type="text/javascript" src="humantree.js"></script>
+    <title></title>
+</head>
+<body>
+<div id="main">
+    <ul class="treeview-red" id="red">
+        <li><span>总监</span>
+            <ul>
+                <li><span>人事总监</span>
+                    <ul>
+                        <li><span>行政总监</span></li>
+                    </ul>
+                </li>
+                <li><span>技术总监</span></li>
+                <li><span>财务总监</span></li>
+            </ul>
+        </li>
+        <li><span>经理</span>
+            <ul>
+                <li><span>人事经理</span>
+                    <ul>
+                        <li><span>李经理</span></li>
+                        <li><span>胡经理</span></li>
+                    </ul>
+                </li>
+                <li><span>技术经理</span></li>
+                <li><span>产品经理</span>
+                    <ul>
+                        <li><span>高级设计</span>
+                            <ul>
+                                <li><span>李明珠</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <input type="text" placeholder="请输入管理人员" class="input">
+    <button id="add">添加管理</button>
+    <br>
+    <input type="text" placeholder="请输入职务" class="zhiwu">
+    <button id="ad">添加职务</button>
+</div>
+</body>
+</html>
