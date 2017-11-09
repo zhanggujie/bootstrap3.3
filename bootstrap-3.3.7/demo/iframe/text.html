@@ -558,12 +558,14 @@
         return false
     })
     /***
-     *
+     *  dom 元素可以使用$()进行封装成jquery对象直接使用jquery方法  在这个问题上纠结了好久
      * @type {any}
      */
     var li = $('.li');
     for (var i=0;i<li.length;i++){
-        console.log(li[i].nextSibling.nextElementSibling.innerHTML)
+        console.log($(li[i]).next().html());
+        console.log(li[i].nextSibling.nextElementSibling.innerHTML);
+        console.log(li[i].nextElementSibling.innerHTML + "09")
     }
 //    $('.btn').trigger('click','你好歹的')
 </script>
