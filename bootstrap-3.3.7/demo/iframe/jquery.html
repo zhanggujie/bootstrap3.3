@@ -10,45 +10,51 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="../../dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/loading.css">
     <script type="text/javascript" src="../../dist/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../../dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/commonality/loading.js"></script>
+
     <title></title>
 </head>
 <body>
 <div class="container">
     <h2>JQUERT 学习</h2>
-    <h3>ajax请求 <small>从本地获取数据</small></h3>
+    <h3>ajax请求
+        <small>从本地获取数据</small>
+    </h3>
     <table class="table table-striped table-hover">
-        <tr>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>年龄</th>
-            <th>编号</th>
-            <th>婚况</th>
-        </tr>
-        <tr >
-            <td><span>张珊</span></td>
-            <td><span>女</span></td>
-            <td><span>28</span></td>
-            <td><span>03223</span></td>
-            <td><span>未婚</span></td>
-        </tr>
-
-
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>编号</th>
+                <th>婚况</th>
+            </tr>
+        </thead>
+       <tbody>
+           <tr>
+               <td><span>张珊</span></td>
+               <td><span>女</span></td>
+               <td><span>28</span></td>
+               <td><span>03223</span></td>
+               <td><span>未婚</span></td>
+           </tr>
+       </tbody>
     </table>
 </div>
 
 
 <script type="text/javascript">
     $.ajax({
-        url:'index.json',
-        dataType:'json',
-        success:function (data) {
-            console.log(data)
+        url: 'index.json',
+        dataType: 'json',
+        success: function (data) {
             var data = data.data;
             var html = "";
-            for(person in data){
-                html+=`<tr>
+            for (person in data) {
+                html += `<tr>
                 <td><span>${data[person].name}</span></td>
                 <td><span>${data[person].gender}<span></td>
                 <td><span>${data[person].age}</span></td>
@@ -58,6 +64,14 @@
             }
             $('tbody').append(html)
         }
+    })
+    /***
+     * ajaxError  请求错误时调用  使用ajax对象调用  不能使用$.ajaxError
+     * ajaxStart(callback)请求开始时调用  可以调用loading 显示
+     * ajaxStop(callback)请求结束调用 关闭loading
+     */
+    $(document).ajaxError(function (event,request,settings) {
+        $('tbody').append('<div>你请求的数据搬家了</div>')
     })
 </script>
 </body>
