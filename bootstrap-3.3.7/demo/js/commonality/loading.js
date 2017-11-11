@@ -19,6 +19,6 @@ $(document).ajaxStart(function () {
 $(document).ajaxSend(function () {
     setTimeout(function () {
         $('.contentload').remove()
-    },1000)
+    },100)
 
 })

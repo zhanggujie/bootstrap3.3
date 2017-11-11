@@ -25,129 +25,157 @@
         <small>从本地获取数据</small>
     </h3>
     <div class="form-group form-inline">
-        <button class="btn btn-danger btn-block" data-toggle="modal" data-target="#mymodal" >添加</button>
+        <button class="btn btn-danger btn-block" data-toggle="modal" data-target="#mymodal">添加</button>
     </div>
     <table class="table table-striped table-hover">
         <thead>
-            <tr>
-                <th>姓名</th>
-                <th>性别</th>
-                <th>年龄</th>
-                <th>编号</th>
-                <th>婚况</th>
-            </tr>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>编号</th>
+            <th>婚况</th>
+        </tr>
         </thead>
-       <tbody>
-           <tr>
-               <td><span>张珊</span></td>
-               <td><span>女</span></td>
-               <td><span>28</span></td>
-               <td><span>03223</span></td>
-               <td><span>未婚</span></td>
-           </tr>
-       </tbody>
+        <tbody>
+        <tr>
+            <td><span>张珊</span></td>
+            <td><span>女</span></td>
+            <td><span>28</span></td>
+            <td><span>03223</span></td>
+            <td><span>未婚</span></td>
+        </tr>
+        </tbody>
     </table>
+    <h2>筛选</h2>
+    <ul class="list-unstyled">
+        <li class="first">家电</li>
+        <li>户外</li>
+        <li>生活</li>
+        <li>
+            体育
+            <span>我的开源</span>
+        </li>
+        <li>爱好</li>
+    </ul>
+    <p class="p"><b>Values: </b></p>
+    <form>
+        <input type="text" name="name" value="John"/>
+        <input type="text" name="password" value="password"/>
+        <input type="text" name="url" value="http://ejohn.org/"/>
+    </form>
 </div>
 <div class="modal fade" tabindex="-1" role="dialog" id="mymodal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Modal title</h4>
             </div>
             <div class="modal-body">
-                <form  class="form-horizontal" id="myFrome">
+                <form class="form-horizontal" id="myFrome">
                     <div class="form-group">
                         <label for="inputName" class="col-sm-2 control-label">姓名</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control validate[required]" id="inputName"  placeholder="姓名">
+                            <input type="text" class="form-control validate[required]" id="inputName" placeholder="姓名">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label  class="col-sm-2 control-label">姓别</label>
+                        <label class="col-sm-2 control-label">姓别</label>
                         <label class="radio-inline">
-                            <input type="radio" name="gender" class="gender" id="man"  value="男" checked>男
+                            <input type="radio" name="gender" class="gender" id="man" value="男" checked>男
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="gender"  class="gender" id="woman" value="女">女
+                            <input type="radio" name="gender" class="gender" id="woman" value="女">女
                         </label>
                     </div>
                     <div class="form-group">
                         <label for="age" class="col-sm-2 control-label">年龄</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control validate[required]" id="age"  placeholder="年龄">
+                            <input type="text" class="form-control validate[required]" id="age" placeholder="年龄">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="number" class="col-sm-2 control-label">编号</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control validate[required]" id="number"  placeholder="编号">
+                            <input type="text" class="form-control validate[required]" id="number" placeholder="编号">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label  class="col-sm-2 control-label">婚况</label>
+                        <label class="col-sm-2 control-label">婚况</label>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions"    class="marriageStatus" id="married"  value="已婚">已婚
+                            <input type="radio" name="inlineRadioOptions" class="marriageStatus" id="married"
+                                   value="已婚">已婚
 
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions"  class="marriageStatus" id="discoverture" checked value="未婚">未婚
+                            <input type="radio" name="inlineRadioOptions" class="marriageStatus" id="discoverture"
+                                   checked value="未婚">未婚
                         </label>
                     </div>
 
                 </form>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                           <button class="btn btn-default glyphicon glyphicon-search" type="button" style="top: 0"></button>
+                       </span>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary"  id="save" >Save changes</button>
             </div>
         </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<script type="text/javascript" src="../js/validation/jquery.validationEngine.min.js"></script>
-<script type="text/javascript" src="../js/validation/jquery.validationEngine-zh_CN.js"></script>
-<script type="text/javascript">
-    /***
-     * 表单验证
-     */
-    $('#myFrome').validationEngine('attach', {//调用表单验证
-        promptPosition: 'centerRight',
-        scroll: false
-    });
-    $.ajax({
-        url: 'index.json',
-        dataType: 'json',
-        success: function (data) {
-            var data = data.data;
-            var html = "";
-            for (person in data) {
-                html += `<tr>
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <script type="text/javascript" src="../js/validation/jquery.validationEngine.min.js"></script>
+        <script type="text/javascript" src="../js/validation/jquery.validationEngine-zh_CN.js"></script>
+        <script type="text/javascript">
+            /***
+             * 表单验证
+             */
+            $('#myFrome').validationEngine('attach', {//调用表单验证
+                promptPosition: 'centerRight',
+                scroll: false
+            });
+            $.ajax({
+                url: 'index.json',
+                dataType: 'json',
+                success: function (data) {
+                    var data = data.data;
+                    var html = "";
+                    for (person in data) {
+                        html += `<tr>
                 <td><span>${data[person].name}</span></td>
                 <td><span>${data[person].gender}<span></td>
                 <td><span>${data[person].age}</span></td>
                 <td><span>${data[person].serialNumber}</span></td>
                 <td><span onclick="tosave(this)">${data[person].marriage}</span></td>
             </tr>`;
-            }
-            $('tbody').append(html)
-        }
-    }).then(function (data) {
-        console.log(data)
-    })
-    /***
-     * ajaxError  请求错误时调用  使用ajax对象调用  不能使用$.ajaxError
-     * ajaxStart(callback)请求开始时调用  可以调用loading 显示
-     * ajaxStop(callback)请求结束调用 关闭loading
-     */
-    $(document).ajaxError(function (event,request,settings) {
-        $('tbody').append('<div>你请求的数据搬家了</div>')
-    });
-    $('#save').on('click',function () {
+                    }
+                    $('tbody').append(html)
+                }
+            }).then(function (data) {
+                console.log(data)
+            })
+            /***
+             * ajaxError  请求错误时调用  使用ajax对象调用  不能使用$.ajaxError
+             * ajaxStart(callback)请求开始时调用  可以调用loading 显示
+             * ajaxStop(callback)请求结束调用 关闭loading
+             */
+            $(document).ajaxError(function (event, request, settings) {
+                $('tbody').append('<div>你请求的数据搬家了</div>')
+            });
+            $('#save').on('click', function () {
 ///  检查表单验证是够通过
-        if (!$('#myFrome').validationEngine('validate')){
-            return;
-        }
-        $('tbody').append( `<tr>
+                if (!$('#myFrome').validationEngine('validate')) {
+                    return;
+                }
+                $('tbody').append(`<tr>
                 <td><span>${$("#inputName").val()}</span></td>
                 <td><span>${$('.gender:checked').val()}<span></td>
                 <td><span>${$("#age").val()}</span></td>
@@ -155,17 +183,58 @@
                 <td><span onclick="tosave(this)">${$('.marriageStatus:checked').val()}</span></td>
             </tr>`)
 
-        $('#mymodal').modal('hide')
-    });
-    function tosave(obj) {
-        console.log($(obj).closest('tr').find('td:eq(1) span').html())
-    }
-    //改变窗口大小事件
-    $(window).resize(function () {
-        console.log($('.container').outerWidth())
-    })
+                $('#mymodal').modal('hide');
 
+                console.log($(':radio:checked').val())
+            });
+            function tosave(obj) {
+                console.log($(obj).closest('tr').find('td:eq(1)').text())
+            }
+            //改变窗口大小事件
+            $(window).resize(function () {
+//        console.log($('.container').outerWidth())
+            })
+            $('.list-unstyled li').first().css("backgroundColor", 'blue');
+            $('.list-unstyled li').last().css("color", 'green');
+            $('ul>li').first('.first').css("fontSize", '24px');
+            $('li').filter(function (index) {
+                /***
+                 * index  dom 在集合中的索引
+                 * this 当前的dom元素
+                 * filter 会遍历所用的li元素 返回符合要求的元素
+                 */
+                return $('span', this).length > 0;
+            }).css("color", 'red');
+            $('.p').append($('input').map(function () {
+                return $(this).val()
+            }).get().join(','))
+            //去重 合并 数组对象
+            var srr = [{name: '001', id: '009', val: '护理'}, {name: '001', id: '009', val: '美容'}, {
+                name: '001',
+                id: '009',
+                val: '就是覅偶尔'
+            }, {name: '001', id: '009', val: '我就信你'}, {name: '00154', id: '009', val: '就是覅偶尔'}, {
+                name: '00154',
+                id: '009',
+                val: '未发文'
+            }];
+            function unique(arr) {
+                var res = [];
+                var obj = {};
+                var index = 0;
+                for (var i = 0; i < arr.length; i++) {
+                    if (!obj[arr[i].name]) {
+                        res.push(arr[i]);
+                        obj[arr[i].name] = 1;
+                        index++
+                    } else {
+                        res[index - 1].val += " /" + arr[i].val
+                    }
+                }
+                return res;
+            }
 
-</script>
+            console.log(unique(srr))
+        </script>
 </body>
 </html>
