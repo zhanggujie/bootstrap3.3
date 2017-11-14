@@ -59,11 +59,17 @@
         <li>爱好</li>
     </ul>
     <p class="p"><b>Values: </b></p>
-    <form>
+    <form class="form">
         <input type="text" name="name" value="John"/>
         <input type="text" name="password" value="password"/>
         <input type="text" name="url" value="http://ejohn.org/"/>
     </form>
+    <h3>slice选择一个匹配元素 slice(start,end)包含start 不含end start 从零开始</h3>
+    <p class="slice04">slice01</p>
+    <p class="slice04">slice02</p>
+    <p class="slice04">slice03</p>
+    <p class="slice04">slice04</p>
+    <p class="slice04">slice05</p>
 </div>
 <div class="modal fade" tabindex="-1" role="dialog" id="mymodal">
     <div class="modal-dialog" role="document">
@@ -142,26 +148,29 @@
                 promptPosition: 'centerRight',
                 scroll: false
             });
-            $.ajax({
+            /**
+             *$.when()提供一种方法来执行一个或多个对象的回调函数 延迟对象通常表示异步事件 调用then方法 获取返回数据
+             */
+
+            $.when($.ajax({
                 url: 'index.json',
                 dataType: 'json',
-                success: function (data) {
-                    var data = data.data;
-                    var html = "";
-                    for (person in data) {
-                        html += `<tr>
+            })).then(function (data) {
+                var data = data.data;
+
+                var html = "";
+                for (person in data) {
+                    html += `<tr>
                 <td><span>${data[person].name}</span></td>
                 <td><span>${data[person].gender}<span></td>
                 <td><span>${data[person].age}</span></td>
                 <td><span>${data[person].serialNumber}</span></td>
                 <td><span onclick="tosave(this)">${data[person].marriage}</span></td>
             </tr>`;
-                    }
-                    $('tbody').append(html)
                 }
-            }).then(function (data) {
-                console.log(data)
+                $('tbody').append(html)
             })
+            
             /***
              * ajaxError  请求错误时调用  使用ajax对象调用  不能使用$.ajaxError
              * ajaxStart(callback)请求开始时调用  可以调用loading 显示
@@ -185,7 +194,7 @@
 
                 $('#mymodal').modal('hide');
 
-                console.log($(':radio:checked').val())
+                console.log($(':input:text'))
             });
             function tosave(obj) {
                 console.log($(obj).closest('tr').find('td:eq(1)').text())
@@ -234,7 +243,26 @@
                 return res;
             }
 
-            console.log(unique(srr))
+
+    $('.slice04').slice(2,4).css({backgroundColor:'yellow'})
+          var $form =  $('.form').children();
+            $form.map(function () {
+                console.log($(this).val())
+            })
+
+           /**
+            * @Description: jquery工具
+            * @author:  zhangguijie
+            * @date: 9:56
+            * @  $.makeArray(obj) 将类数组对象转化为数组
+            */
+
+        var  arr =$.makeArray($('.form').children());
+            arr.forEach(function (item,index) {
+                console.log(item.getAttribute('value'));
+                console.log(index.toExponential(index))
+            })
+            $(".slice04:contains('slice04')").css('color','red')
         </script>
 </body>
 </html>
